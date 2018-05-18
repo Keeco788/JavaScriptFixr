@@ -1,0 +1,79 @@
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class='container'>
+  <h1>Currency Converter</h1>
+  <button id='search'>Find Rates</button>
+  <br>
+
+  <div id='insertTimeDate'></div>
+  <br>
+  <p>1 Euro is worth...</p>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div>
+        <label for="">GBP</label>
+        <input type='number' id='GBP' class="form-control" placeholder="Click to update">
+      </div>
+      <div>
+        <label for="">NZD</label>
+        <input type='number' id='NZD' class="form-control" placeholder="Click to update">
+      </div>
+      <div>
+        <label for="">CAD</label>
+        <input type='number' id='CAD' class="form-control" placeholder="Click to update">
+      </div>
+      <div>
+        <label for="">USD</label>
+        <input type='number' id='USD' class="form-control" placeholder="Click to update">
+      </div>
+    </div>
+    <div class="col-sm">
+      <form>
+          <div class="form-group">
+            <select id="fromCurrency" class="form-control">
+              <option selected>from currency</option>
+              <option>GBP</option>
+              <option>NZD</option>
+              <option>CAD</option>
+              <option>USD</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="toCurrency" class="form-control">
+              <option selected>to currency</option>
+              <option>GBP</option>
+              <option>NZD</option>
+              <option>CAD</option>
+              <option>USD</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" id="amountValue" placeholder="1.00">
+          </div>
+          <button type="submit" class="btn btn-primary" id='calculate'>Calculate</button>
+        </form>
+        <div>
+          <label for="">Total Value</label>
+          <input type='text' class="form-control" id='totalValue' placeholder="0.00">
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+</body>
+<footer></footer>
+</html>
