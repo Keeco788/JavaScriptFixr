@@ -1,12 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function(){
 
   endpoint = 'latest';
   access_key = config.MY_KEY;
   urlLink = 'http://data.fixer.io/api/' + endpoint + '?access_key=' + access_key
   var composedData
 
-  $('#search').on( 'click', function(e){
-    e.preventDefault();
+  var getData = function(){
     $.get(urlLink, recievedData);
     function recievedData(data){
       composedData = data;
@@ -32,7 +31,14 @@ $(document).ready(function() {
       $('#CAD').val(rateCAD);
       var rateUSD = data.rates.USD;
       $('#USD').val(rateUSD);
-    };
+    }
+  }
+  getData();
+
+  $('#search').on( 'click', function(e){
+    e.preventDefault();
+    $('#insertTimeDate').empty();
+    getData();
   });
 
   $('#calculate').on('click', function(e){
